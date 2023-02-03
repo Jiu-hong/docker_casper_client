@@ -1,0 +1,15 @@
+## build
+docker build -t casper-client .
+
+## rename 
+docker tag casper-client:v1 redbirdsun/casper-client:v1
+docker push redbirdsun/casper-client:v1
+
+
+## usage:
+
+docker pull redbirdsun/casper-client:v1
+docker image tag redbirdsun/casper-client:v1 casper-client
+
+docker run --rm -ti casper-client help
+docker run --rm -ti casper-client get-state-root-hash -n http://3.136.227.9:7777
